@@ -19,7 +19,7 @@ const App: React.FC = () => {
   console.log(todos)
   return (
     <div className="App">
-      <span className='heading'>Taskify</span>
+      <span className='heading'>Todoist</span>
       <InputField todo={todo} setTodo={setTodo} handleAddTodo={handleAddTodo}></InputField>
       <TodoLists todos={todos} setTodos={setTodos}></TodoLists>
     </div>
