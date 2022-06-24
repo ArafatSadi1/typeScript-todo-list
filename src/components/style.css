@@ -67,6 +67,9 @@
 }
 
 .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 23px;
 }
 
@@ -89,11 +92,10 @@
 .edit_todo_text{
     border: none;
     border-radius: 10px;
-    padding: 0 3px;
+    padding: 0 5px;
 }
 
 .edit_todo_text:focus{
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 

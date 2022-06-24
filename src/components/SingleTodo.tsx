@@ -14,7 +14,15 @@ const SingleTodo: React.FC<props> = ({ todo, todos, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
-  const handleEditTodo = (id: number) => {};
+  const handleEditTodo = (e: React.FormEvent, id: number) => {
+    e.preventDefault();
+    setTodos(
+      todos?.map((todo) =>
+        todo.id === id ? { ...todo, todo: editTodo } : todo
+      )
+    );
+    setEdit(false);
+  };
 
   const editRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -34,7 +42,7 @@ const SingleTodo: React.FC<props> = ({ todo, todos, setTodos }) => {
   };
 
   return (
-    <form className="single_todo">
+    <form onSubmit={(e) => handleEditTodo(e, todo.id)} className="single_todo">
       {edit ? (
         <input
           type="text"
