@@ -49,20 +49,72 @@
     width: 90vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
     margin: 40px;
 }
 
 .single_todo{
     display: flex;
-    background-color: cadetblue;
-    padding: 15px;
-    font-size: 20px;
+    justify-content: space-between;
+    background-image: url("https://cfocussoftware.com/wp-content/uploads/2017/04/azure-government-adds-geographic-routing-to-traffic-manager.jpg");
+    padding: 10px 15px;
     border-radius: 10px;
+}
+
+.single_todo_text{
+    font-size: 20px;
+    color: #fff;
+}
+
+.icons{
+    font-size: 23px;
+}
+
+.edit_icon{
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete_icon{
+    color: #ff4f4f;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.tick_icon{
+    color: #24f224;
+    cursor: pointer;
+}
+
+.edit_todo_text{
+    border: none;
+    border-radius: 10px;
+    padding: 0 3px;
+}
+
+.edit_todo_text:focus{
+    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+@media (max-width: 1200px){
+    .todo_list{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }    
 }
 
 @media (max-width: 700px){
     .input{
         width: 90%;
     }
+    .todo_list{
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }    
 }
+
